@@ -13,18 +13,18 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
       - name: Install dependencies
         run: npm install
-        working-directory: comsol
+        working-directory: ./comsol
 
       - name: Build project
         run: npm run build
-        working-directory: comsol
+        working-directory: ./comsol
 
       - name: Deploy to GoDaddy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
