@@ -23,6 +23,7 @@ jobs:
 
       - name: 🛠️ Build project
         run: npm run build
+        working-directory: ./comsol
 
       - name: 📤 Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
