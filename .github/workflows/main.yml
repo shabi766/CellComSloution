@@ -23,6 +23,7 @@ jobs:
 
       - name: Build project
         run: npm run build
+        
 
       - name: Deploy to GoDaddy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
