@@ -26,8 +26,8 @@ jobs:
         run: chmod +x node_modules/.bin/vite
         working-directory: ./comsol
 
-      - name: Build project
-        run: npm run build
+      - name: Build 
+        run: npx vite build
         working-directory: ./comsol
 
       - name: Deploy to GoDaddy via FTP
