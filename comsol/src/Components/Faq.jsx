@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ChevronDown, ChevronUp, HelpCircle } from "lucide-react";
 
 const faqs = [
   {
@@ -26,24 +27,33 @@ const Faq = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gradient-to-b from-blue-50 via-white to-blue-100">
       <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+        <h2 className="text-4xl font-extrabold text-center text-blue-900 mb-12">
           Frequently Asked Questions
         </h2>
         <div className="space-y-4">
           {faqs.map((faq, idx) => (
             <div
               key={idx}
-              className="border rounded-lg p-4 cursor-pointer bg-white shadow"
+              className="bg-white p-6 rounded-2xl shadow-md border border-blue-100 hover:shadow-lg transition-all cursor-pointer"
               onClick={() => toggle(idx)}
             >
-              <h3 className="text-lg font-semibold text-gray-800 flex justify-between items-center">
-                {faq.question}
-                <span>{openIndex === idx ? "−" : "+"}</span>
-              </h3>
+              <div className="flex justify-between items-center text-blue-800">
+                <div className="flex items-center gap-2">
+                  <HelpCircle className="w-5 h-5 text-blue-500" />
+                  <h3 className="text-lg font-semibold">{faq.question}</h3>
+                </div>
+                {openIndex === idx ? (
+                  <ChevronUp className="w-5 h-5 text-blue-500" />
+                ) : (
+                  <ChevronDown className="w-5 h-5 text-blue-500" />
+                )}
+              </div>
               {openIndex === idx && (
-                <p className="mt-2 text-gray-700">{faq.answer}</p>
+                <p className="mt-3 text-gray-700 transition-opacity duration-300 ease-in-out">
+                  {faq.answer}
+                </p>
               )}
             </div>
           ))}

@@ -1,4 +1,6 @@
 import React from "react";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const services = [
   {
@@ -29,26 +31,32 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-center mb-4">Our Services</h1>
-      <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-        At Orbito, we offer a comprehensive suite of services designed to support your organization’s digital evolution and operational efficiency.
+    <>
+    <Navbar/>
+    <section className="max-w-7xl mx-auto px-6 py-20 bg-gradient-to-tr from-blue-50 via-white to-blue-50">
+      <h1 className="text-5xl font-extrabold text-center text-blue-900 mb-6">
+        Our Services
+      </h1>
+      <p className="text-center text-blue-700 mb-14 max-w-3xl mx-auto text-lg">
+        At CellCom, we offer a comprehensive suite of services designed to support your organization’s digital evolution and operational efficiency.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {services.map((service, idx) => (
           <div
             key={idx}
-            className="bg-white shadow-lg rounded-2xl p-6 border hover:shadow-xl transition"
+            className="bg-white rounded-3xl p-8 border border-blue-100 shadow-md hover:shadow-2xl transition-shadow duration-300 flex flex-col"
           >
-            <h3 className="text-xl font-semibold mb-2 text-indigo-600">
+            <h3 className="text-2xl font-semibold mb-4 text-blue-700 hover:text-blue-900 transition-colors duration-300">
               {service.title}
             </h3>
-            <p className="text-gray-600">{service.desc}</p>
+            <p className="text-gray-700 flex-grow">{service.desc}</p>
           </div>
         ))}
       </div>
-    </div>
+    </section>
+    <Footer />
+    </>
   );
 };
 

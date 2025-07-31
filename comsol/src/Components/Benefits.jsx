@@ -20,16 +20,23 @@ const benefits = [
 
 const Benefits = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gradient-to-br from-indigo-100 via-white to-blue-100">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-12">The Orbito Advantage</h2>
-        <div className="grid md:grid-cols-3 gap-8 text-left">
+        <h2 className="text-4xl font-bold text-gray-900 mb-16 tracking-tight">
+          The CellCome Advantage
+        </h2>
+        <div className="grid md:grid-cols-3 gap-10 text-left">
           {benefits.map((benefit, idx) => (
-            <div key={idx} className="p-6 border rounded-xl shadow hover:shadow-md transition">
-              <h3 className="text-xl font-semibold text-blue-600 mb-2">
+            <div
+              key={idx}
+              className="bg-white p-8 rounded-2xl shadow-lg border hover:shadow-2xl transition duration-300 ease-in-out"
+            >
+              <h3 className="text-2xl font-semibold text-blue-600 mb-3">
                 {benefit.title}
               </h3>
-              <p className="text-gray-700">{benefit.description}</p>
+              <p className="text-gray-700 leading-relaxed">
+                {benefit.description}
+              </p>
             </div>
           ))}
         </div>

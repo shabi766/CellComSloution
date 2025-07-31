@@ -14,18 +14,18 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-md">
+    <header className="sticky top-0 z-50 backdrop-blur-md bg-white/70 shadow-sm transition duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
         {/* Logo */}
-        <div className="text-2xl font-bold text-blue-900">Orbito</div>
+        <div className="text-2xl font-extrabold text-sky-800 tracking-wide">CellCom Solutions</div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6 text-gray-700 font-medium">
+        <nav className="hidden md:flex space-x-6 text-gray-800 font-medium">
           {navLinks.map(({ name, path }) => (
             <Link
               key={name}
               to={path}
-              className="hover:text-blue-600 transition duration-200"
+              className="hover:text-sky-600 transition-colors duration-200"
               onClick={() => setMenuOpen(false)}
             >
               {name}
@@ -35,7 +35,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-700"
+          className="md:hidden text-gray-800"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -45,12 +45,12 @@ const Navbar = () => {
 
       {/* Mobile Dropdown */}
       {menuOpen && (
-        <div className="md:hidden bg-white shadow-md px-4 py-4 space-y-3">
+        <div className="md:hidden bg-white/90 backdrop-blur-sm shadow-md px-4 py-4 space-y-3">
           {navLinks.map(({ name, path }) => (
             <Link
               key={name}
               to={path}
-              className="block text-gray-700 font-medium hover:text-blue-600"
+              className="block text-gray-800 font-medium hover:text-sky-600"
               onClick={() => setMenuOpen(false)}
             >
               {name}

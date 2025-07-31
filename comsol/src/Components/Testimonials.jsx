@@ -6,21 +6,21 @@ const testimonials = [
     role: "CEO, Acme Corp",
     photo: "https://randomuser.me/api/portraits/women/44.jpg",
     quote:
-      "Orbito transformed our vision into reality. Their team was responsive, knowledgeable, and delivered on time.",
+      "CellCom transformed our vision into reality. Their team was responsive, knowledgeable, and delivered on time.",
   },
   {
     name: "John Smith",
     role: "CTO, BetaTech",
     photo: "https://randomuser.me/api/portraits/men/32.jpg",
     quote:
-      "Working with Orbito was a game changer for our product development. Highly recommended!",
+      "Working with CellCom was a game changer for our product development. Highly recommended!",
   },
   {
     name: "Emily Johnson",
     role: "Product Manager, Gamma LLC",
     photo: "https://randomuser.me/api/portraits/women/68.jpg",
     quote:
-      "Professional, efficient, and creative. Orbito’s team helped us launch quickly and scale seamlessly.",
+      "Professional, efficient, and creative. CellCom’s team helped us launch quickly and scale seamlessly.",
   },
 ];
 

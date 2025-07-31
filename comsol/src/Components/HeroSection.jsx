@@ -1,29 +1,47 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
+const images = [
+  "/hero-image.jpg",
+  "/hero-image2.jpg",
+  "/hero-image3.jpg",
+];
 
 const HeroSection = () => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <section className="bg-white py-16">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col-reverse md:flex-row items-center justify-between gap-8">
-        {/* Left Content */}
-        <div className="text-center md:text-left max-w-xl">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight">
+    <section
+      className="relative py-32 text-white"
+      style={{
+        backgroundImage: `url(${images[current]})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        transition: "background-image 1s ease-in-out",
+      }}
+    >
+      {/* Overlay to darken the background for better text readability */}
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+      {/* Content container */}
+      <div className="relative max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="max-w-xl text-center md:text-left">
+          <h1 className="text-5xl font-bold leading-tight mb-6">
             Grow your business with digital solutions
           </h1>
-          <p className="mt-6 text-lg text-gray-600">
+          <p className="text-lg mb-8 max-w-md">
             We craft tailored strategies and experiences that help your business grow, adapt, and stand out in a digital world.
           </p>
-          <button className="mt-8 px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl shadow hover:bg-blue-700 transition">
+          <button className="px-8 py-3 bg-blue-600 rounded-xl font-semibold hover:bg-blue-700 transition">
             Get Started
           </button>
-        </div>
-
-        {/* Right Image */}
-        <div className="w-full md:w-1/2">
-          <img
-            src="https://orbitoinc.com/_next/image?url=%2Fhero-image.png&w=1200&q=75"
-            alt="Hero"
-            className="w-full h-auto rounded-xl"
-          />
         </div>
       </div>
     </section>
