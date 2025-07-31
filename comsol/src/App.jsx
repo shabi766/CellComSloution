@@ -9,6 +9,9 @@ import Benefits from './Components/Benefits'
 import Testimonials from './Components/Testimonials'
 import Faq from './Components/Faq'
 import Footer from './Components/Footer'
+import AboutUs from './Components/Aboutus'
+import Aboutus from './Components/Aboutus'
+import ServicesSection from './Components/ServiceSection'
 
 
 function App() {
@@ -16,7 +19,9 @@ function App() {
     <>
       <Navbar />
       <HeroSection/>
+      <Aboutus/>
       <WhyOrbitoWorks />
+      <ServicesSection />
       <HowItWorks />
       <Overview />
       <Features />

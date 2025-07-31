@@ -6,6 +6,7 @@ import App from "./src/App";
 import Services from "./src/Components/Services";
 import Solutions from "./src/Components/Solutions";
 import Contact from "./src/Components/Contact";
+import Blogs from "./src/Components/Blogs";
 
 
 function MainRoutes() {
@@ -17,6 +18,7 @@ function MainRoutes() {
         <Route path="/services" element={<Services />} />
         <Route path="/solutions" element={<Solutions />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/blogs" element={<Blogs />} />
         {/* Add more routes as needed */}
       </Routes>
     </Router>

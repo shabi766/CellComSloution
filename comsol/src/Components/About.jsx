@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Navbar"; // Adjust the path if needed
 import { HeartHandshake, Lightbulb, Users } from "lucide-react";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
