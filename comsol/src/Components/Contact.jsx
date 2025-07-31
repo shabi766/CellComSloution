@@ -31,7 +31,7 @@ const Contact = () => {
             <Mail size={28} className="text-indigo-600 mt-1" />
             <div>
               <h3 className="text-2xl font-semibold text-indigo-900 mb-1">Email</h3>
-              <p className="text-indigo-700 text-lg">info@CellCom.com</p>
+              <p className="text-indigo-700 text-lg">cellcomsolutions2016@gmail.com</p>
             </div>
           </div>
 
@@ -41,7 +41,7 @@ const Contact = () => {
               <h3 className="text-2xl font-semibold text-indigo-900 mb-1">Head Office</h3>
               <address className="not-italic text-indigo-700 text-lg leading-relaxed">
                 4940 Estes Ave <br />
-                Skoke, Illinois <br />
+                Skokie, Illinois <br />
                 60077
               </address>
             </div>

@@ -13,7 +13,7 @@ const Footer = () => {
           <p className="mb-1">4940 Estes Ave</p>
           <p className="mb-1">Skokie, Illinois 60077</p>
           <p className="mb-1">
-            <span className="font-semibold">Email:</span> contact@CellCom.com
+            <span className="font-semibold">Email:</span> cellcomsolutions2016@gmail.com
           </p>
           <p>
             <span className="font-semibold">Phone:</span> +1 585 4085017
@@ -54,7 +54,7 @@ const Footer = () => {
             {[
               { name: "Refund Policy", path: "/policies/refund" },
               { name: "Privacy Policy", path: "/policies/privacy" },
-              { name: "Terms & Conditions", path: "/policies/terms" }, // for next prompt
+              { name: "Terms & Conditions", path: "/policies/terms" },
             ].map(({ name, path }) => (
               <li key={name}>
                 <Link
@@ -69,7 +69,45 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="mt-14 text-center text-gray-400 text-sm tracking-wide select-none">
+      {/* Payment Icons */}
+      <div className="mt-10 flex justify-center gap-6 items-center">
+        {[
+          {
+            alt: "Visa",
+            src: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/visa.svg",
+          },
+          {
+            alt: "Mastercard",
+            src: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mastercard.svg",
+          },
+          {
+            alt: "PayPal",
+            src: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/paypal.svg",
+          },
+          {
+            alt: "American Express",
+            src: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/americanexpress.svg",
+          },
+          {
+            alt: "Google Pay",
+            src: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/googlepay.svg",
+          },
+          {
+            alt: "Apple Pay",
+            src: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/applepay.svg",
+          },
+        ].map(({ alt, src }) => (
+          <img
+            key={alt}
+            src={src}
+            alt={alt}
+            className="w-10 h-10 opacity-80 hover:opacity-100 transition-opacity duration-300"
+            title={alt}
+          />
+        ))}
+      </div>
+
+      <div className="mt-10 text-center text-gray-400 text-sm tracking-wide select-none">
         &copy; {new Date().getFullYear()} CellCom Solution Inc. All rights reserved.
       </div>
     </footer>
