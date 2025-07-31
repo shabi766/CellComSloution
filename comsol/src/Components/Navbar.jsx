@@ -21,7 +21,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center h-20">
         {/* Logo */}
         <div className="text-2xl font-extrabold text-sky-800 tracking-wide flex-shrink-0">
-          CellCom Solutions
+          CellCom Solution
         </div>
 
         {/* Nav Links centered */}

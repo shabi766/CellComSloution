@@ -27,7 +27,7 @@ const WhyOrbitoWorks = () => {
     <section className="py-20 bg-gradient-to-r from-blue-50 via-white to-blue-100">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-extrabold text-gray-900 mb-14">
-          Why CellCom Works
+          How CellCom Works
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">

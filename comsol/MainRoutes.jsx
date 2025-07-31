@@ -7,6 +7,9 @@ import Services from "./src/Components/Services";
 import Solutions from "./src/Components/Solutions";
 import Contact from "./src/Components/Contact";
 import Blogs from "./src/Components/Blogs";
+import RefundPolicy from "@/Components/RefundPolicy";
+import PrivacyPolicy from "@/Components/PrivacyPolicy";
+import TermsConditions from "@/Components/TermsConditions";
 
 
 function MainRoutes() {
@@ -19,6 +22,9 @@ function MainRoutes() {
         <Route path="/solutions" element={<Solutions />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/policies/refund" element={<RefundPolicy />} />
+      <Route path="/policies/privacy" element={<PrivacyPolicy />} />
+      <Route path="/policies/terms" element={<TermsConditions />} />
         {/* Add more routes as needed */}
       </Routes>
     </Router>
